@@ -31,7 +31,7 @@
   * Выполнить команду получения информации о топике **kafka-topics.sh --describe --bootstrap-server localhost:9092 --topic topic-hw1**
      *  Выведится сообщение следующего вида:
        
-        *Topic: topic-hw1    TopicId: x87OsW58R7yYx9KUbVPZFw PartitionCount: 3       ReplicationFactor: 2    Configs:**
+        *Topic: topic-hw1    TopicId: x87OsW58R7yYx9KUbVPZFw PartitionCount: 3       ReplicationFactor: 2    Configs:*
         
         *Topic: topic-hw1    Partition: 0    Leader: 1       Replicas: 1,2   Isr: 1,2*
         
