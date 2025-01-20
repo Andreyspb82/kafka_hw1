@@ -28,6 +28,17 @@
 * В консоли взаимодествия с брокером кафка необходимо выполнить следующие команды:
   * Выполнить команду **"cd /opt/bitnami/kafka/bin"** для переходв в папку с файлом **kafka-topics.sh**
   * Выполнить команду создания топика **'topic-hw1'** с 3 партициями и 2 репликами **"kafka-topics.sh --create --topic topic-hw1 --bootstrap-server localhost:9092 --partitions 3 --replication-factor 2"**
+  * Выполнить команду получения информации о топике **kafka-topics.sh --describe --bootstrap-server localhost:9092 --topic topic-hw1**
+     *  Выведится сообщение следующего вида:
+       
+        *Topic: topic-hw1    TopicId: x87OsW58R7yYx9KUbVPZFw PartitionCount: 3       ReplicationFactor: 2    Configs:**
+        
+        *Topic: topic-hw1    Partition: 0    Leader: 1       Replicas: 1,2   Isr: 1,2*
+        
+        *Topic: topic-hw1    Partition: 1    Leader: 2       Replicas: 2,0   Isr: 2,0*
+        
+        *Topic: topic-hw1    Partition: 2    Leader: 0       Replicas: 0,1   Isr: 0,1*
+        
 * В браузере перейти по адресу http://localhost:8080 для доступа к интерфейсу управления Kafka
   
 ### Запуск консьюмеров
@@ -35,8 +46,8 @@
 * В проекте **'hw-consumer2'** перейти в класс **'Consumer2'** и запустить выполнение метода **'main'**
 
 ### Запуск продюсера
-* В проекте **'hw1-producer'** перейти в класс **'Producer1'** и запусить выполнение метода **'main'**
-* В процессе выполнения метода в кластер брокеров будет отправлено 150 сообщений
+* В проекте **'hw1-producer'** перейти в класс **'CreateMessage'** и запусить выполнение метода **'main'**
+* В процессе выполнения метода в кластер брокеров будет отправлено 2 сообщений
 * Консьюмеры 1 и 2 получат данные сообщения
   
 
